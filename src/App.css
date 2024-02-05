@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -11,32 +12,80 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.logo.northcoders:hover {
+  filter: drop-shadow(0 0 2em #fb6161aa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
+.users {
   padding: 2em;
+  margin: 0 auto;
 }
 
-.read-the-docs {
+.more-information {
   color: #888;
 }
+
+.users-list {
+  display: flex;
+  margin-left: -40px;
+}
+
+.user {
+  list-style: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.5em 1em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: 130px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.user:hover {
+  border-color: #eb1c24;
+  filter: drop-shadow(0 0 2em #fb6161aa);
+}
+
+.user:focus,
+.user:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.username {
+  color: #eb1c24;
+  padding: 10px;
+  margin: 0 0 5px 0;
+}
+
+.username:hover {
+  color: #e5494e;
+}
+
+.avatar {
+  height: 80px;
+  width: auto;
+  border-radius: 10px;
+  background-color: white;
+  border: solid #eb1c24;
+}
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #eb1c24;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
