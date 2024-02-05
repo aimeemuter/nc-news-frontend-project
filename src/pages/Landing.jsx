@@ -9,7 +9,7 @@ const Landing = () => {
         <Link to="/about">
           <img
             src={NcLogo}
-            className="logo northcoders"
+            className="logo northcoders landing"
             alt="Northcoders logo"
           />
         </Link>

@@ -1,0 +1,59 @@
+.logo.northcoders.header {
+  height: 50px;
+}
+
+.logo.northcoders.header:hover {
+  filter: drop-shadow(0 0 2em #fb6161aa);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.header-title {
+  font-size: 40px;
+}
+
+/* Check... */
+.active-user {
+  list-style: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.5em 1em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: 130px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.active-user:hover {
+  border-color: #eb1c24;
+  filter: drop-shadow(0 0 2em #fb6161aa);
+}
+
+.active-user:focus,
+.active-user:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.username {
+  color: #eb1c24;
+  padding: 10px;
+  margin: 0 0 5px 0;
+}
+
+.username:hover {
+  color: #e5494e;
+}
+
+.avatar {
+  height: 80px;
+  width: auto;
+  border-radius: 10px;
+  background-color: white;
+  border: solid 2px #eb1c24;
+}

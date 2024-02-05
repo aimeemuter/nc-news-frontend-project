@@ -17,8 +17,8 @@ const Users = () => {
     <section className="users-list">
       <ul>
         {users.map((user) => (
-          <Link to="/home">
-            <li key={user.username} className="user">
+          <Link to="/home" key={user.username}>
+            <li className="user">
               <User user={user} />
             </li>
           </Link>
