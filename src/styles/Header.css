@@ -1,5 +1,5 @@
 .logo.northcoders.header {
-  height: 50px;
+  height: 100px;
 }
 
 .logo.northcoders.header:hover {
@@ -8,12 +8,14 @@
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   column-gap: 50px;
 }
 
 .header-title {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 /* Check... */
@@ -25,8 +27,7 @@
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 130px;
-  margin: 10px;
+  width: 120px;
   display: inline-block;
 }
 
@@ -42,8 +43,7 @@
 
 .username {
   color: #eb1c24;
-  padding: 10px;
-  margin: 0 0 5px 0;
+  padding: 5px;
 }
 
 .username:hover {
@@ -51,7 +51,7 @@
 }
 
 .avatar {
-  height: 80px;
+  height: 60px;
   width: auto;
   border-radius: 10px;
   background-color: white;
