@@ -9,3 +9,22 @@ export const fetchUsers = async () => {
   } = response;
   return users;
 };
+
+export const fetchUser = async (username) => {
+  const response = await axios.get(
+    `https://nc-news-application.onrender.com/api/users/${username}`
+  );
+  const {
+    data: { user },
+  } = response;
+  return user;
+};
+
+export const fetchArticles = async () => {
+  let url = `https://nc-news-application.onrender.com/api/articles`;
+  const response = await axios.get(url);
+  const {
+    data: { articles },
+  } = response;
+  return articles;
+};

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import User from "./User";
 import { fetchUsers } from "../utils/requests";
-import { Link } from "react-router-dom";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -17,11 +16,7 @@ const Users = () => {
     <section className="users-list">
       <ul>
         {users.map((user) => (
-          <Link to="/home" key={user.username}>
-            <li className="user">
-              <User user={user} />
-            </li>
-          </Link>
+          <User key={user.username} user={user} />
         ))}
       </ul>
     </section>
