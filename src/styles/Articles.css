@@ -1,0 +1,84 @@
+.articles-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.article-card {
+  display: flex;
+  border: solid 2px black;
+  border-radius: 10px;
+  height: 150px;
+  width: 350px;
+  background-color: #1a1a1a;
+}
+
+.article-card:hover {
+  border-color: #eb1c24;
+  filter: drop-shadow(0 0 2em #fb6161aa);
+}
+
+.article-card:focus,
+.article-card:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.article-card-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 198px;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card p {
+  margin: 0;
+}
+
+.article-card .title {
+  align-self: start;
+  justify-self: center;
+  font-weight: bold;
+  color: #cc1e24;
+  margin: 0 2px;
+  grid-column: 1 / -1;
+}
+
+.article-card .topic {
+  grid-column: 1 / -1;
+  text-transform: uppercase;
+  align-self: end;
+}
+
+.article-card .image {
+  width: 150px;
+  height: auto;
+  border-radius: 10px 0 0 10px;
+  border-right: solid 2px black;
+}
+
+.article-card .author {
+  font-style: italic;
+  grid-column: 1;
+  align-self: end;
+  justify-self: start;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.article-card .date {
+  grid-column: 2;
+  align-self: end;
+  justify-self: end;
+  margin-right: 5px;
+  font-size: 14px;
+}

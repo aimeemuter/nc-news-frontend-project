@@ -1,0 +1,28 @@
+.full-article .title {
+  font-size: 35px;
+  color: #cc1e24;
+}
+
+.full-article .topic {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.full-article .author {
+  font-style: italic;
+  font-size: 16px;
+}
+
+.full-article .image {
+  border: solid 2px black;
+  border-radius: 10px;
+  width: 400px;
+  height: auto;
+}
+
+.full-article .body {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 20px;
+}

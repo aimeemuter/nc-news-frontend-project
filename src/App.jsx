@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import UserContext from "./contexts/UserContext";
 import { useState } from "react";
+import Article from "./pages/Article";
 
 function App() {
   const [activeUser, setActiveUser] = useState(null);
@@ -12,8 +13,9 @@ function App() {
     <UserContext.Provider value={{ activeUser, setActiveUser }}>
       <Routes>
         <Route path="/" element={<Landing />}></Route>
-        <Route path="/home" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/article/:article_id" element={<Article />}></Route>
       </Routes>
     </UserContext.Provider>
   );
