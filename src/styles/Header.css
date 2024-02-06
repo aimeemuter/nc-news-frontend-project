@@ -22,7 +22,7 @@
 .active-user {
   list-style: none;
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: solid 1px black;
   padding: 0.5em 1em;
   background-color: #1a1a1a;
   cursor: pointer;

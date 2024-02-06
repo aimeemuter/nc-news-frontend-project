@@ -9,7 +9,6 @@ const ActiveUser = () => {
   useEffect(() => {
     const getUser = async () => {
       const user = await fetchUser(activeUser);
-      console.log(user);
       setUser(user);
     };
     getUser();
