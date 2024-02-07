@@ -38,3 +38,13 @@ export const fetchArticle = async (article_id) => {
   } = response;
   return article;
 };
+
+export const fetchComments = async (article_id) => {
+  const response = await axios.get(
+    `https://nc-news-application.onrender.com/api/articles/${article_id}/comments`
+  );
+  const {
+    data: { comments },
+  } = response;
+  return comments;
+};

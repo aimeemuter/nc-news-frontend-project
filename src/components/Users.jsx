@@ -13,8 +13,8 @@ const Users = () => {
     getUsers();
   }, []);
   return (
-    <section className="users-list">
-      <ul>
+    <section className="users">
+      <ul className="users-list">
         {users.map((user) => (
           <User key={user.username} user={user} />
         ))}

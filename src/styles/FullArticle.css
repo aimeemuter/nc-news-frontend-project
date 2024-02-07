@@ -1,16 +1,34 @@
+.full-article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+}
+
 .full-article .title {
   font-size: 35px;
   color: #cc1e24;
+  grid-column: 1/-1;
+  margin: 5px;
 }
 
 .full-article .topic {
   text-transform: uppercase;
   font-size: 18px;
+  grid-column: 1/-1;
+  margin-bottom: 5px;
+  margin-top: 30px;
 }
 
 .full-article .author {
   font-style: italic;
   font-size: 16px;
+  justify-self: end;
+  margin: 5px 10px;
+}
+
+.full-article .date {
+  justify-self: start;
+  margin: 5px 10px;
 }
 
 .full-article .image {
@@ -18,11 +36,18 @@
   border-radius: 10px;
   width: 400px;
   height: auto;
+  grid-column: 1/-1;
+  justify-self: center;
+  margin: 15px 0;
 }
 
 .full-article .body {
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 20px;
   font-size: 20px;
+  grid-column: 1/-1;
+}
+
+.full-article .votes {
+  grid-column: 1/-1;
 }
