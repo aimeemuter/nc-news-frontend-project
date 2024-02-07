@@ -1,0 +1,54 @@
+.comments-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.comment-card {
+  max-width: 600px;
+  list-style: none;
+  border: solid 2px black;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.comment-card .body {
+  text-align: left;
+  margin: 10px;
+}
+
+.comment-card .author-date {
+  grid-column: 1;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 200;
+}
+
+.comment-card .author-date .author {
+  margin: 0 0 5px 10px;
+  font-style: italic;
+  color: #cc1e24;
+}
+
+.comment-card .author-date .date {
+  margin: 0 10px 5px 0;
+}
+
+.comment-card .votes-area {
+  grid-column: 2/-1;
+  grid-row: 1/3;
+  align-self: center;
+  border-left: solid 1px black;
+  align-self: stretch;
+  margin: 0;
+  position: relative;
+}
+
+.comment-card .votes-area .votes {
+  position: calc(center);
+}
