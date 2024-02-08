@@ -7,7 +7,7 @@
 }
 
 .comment-card {
-  width: 600px;
+  max-width: 600px;
   list-style: none;
   border: solid 2px black;
   border-radius: 10px;

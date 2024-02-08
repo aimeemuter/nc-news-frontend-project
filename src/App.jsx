@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/home" element={<Home />}></Route>
+        <Route path="/articles" element={<Home />}></Route>
         <Route path="/article/:article_id" element={<Article />}></Route>
       </Routes>
     </UserContext.Provider>

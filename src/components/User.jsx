@@ -12,7 +12,7 @@ const User = ({ user }) => {
   };
 
   return (
-    <Link to="/home" onClick={handleClick}>
+    <Link to="/articles" onClick={handleClick}>
       <li className="user">
         <p className="username">{user.username}</p>
         <img

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <Link to="/home">
+    <Link to="/articles">
       <img
         src={NcLogo}
         className="logo northcoders header"

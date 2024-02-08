@@ -29,7 +29,7 @@ const Users = () => {
         ))}
       </ul>
       {!isLoading && (
-        <Link to="/home">
+        <Link to="/articles">
           <button className="view-articles" onClick={handleClick}>
             View Articles
           </button>

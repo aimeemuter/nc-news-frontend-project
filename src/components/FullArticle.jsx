@@ -1,5 +1,6 @@
 import "../styles/FullArticle.css";
 import { dateFormatter } from "../utils/formatters";
+import Votes from "./Votes";
 
 const FullArticle = ({ article, isLoading }) => {
   if (!isLoading) {
@@ -12,7 +13,7 @@ const FullArticle = ({ article, isLoading }) => {
         <p className="date">{`${date} ${time}`}</p>
         <img className="image" src={article.article_img_url} />
         <p className="body">{article.body}</p>
-        <p className="votes">Votes: {article.votes}</p>
+        <Votes votes={article.votes} article_id={article.article_id} />
       </main>
     );
   }
