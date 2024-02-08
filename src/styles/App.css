@@ -16,6 +16,10 @@
   filter: drop-shadow(0 0 2em #fb6161aa);
 }
 
+.main-title {
+  margin: 0;
+}
+
 .users {
   padding: 2em;
   margin: 0 auto;
@@ -27,6 +31,8 @@
 
 .users-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   padding: 0;
 }
@@ -39,7 +45,7 @@
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 130px;
+  width: 110px;
   margin: 10px;
   display: inline-block;
 }
@@ -47,11 +53,6 @@
 .user:hover {
   border-color: #eb1c24;
   filter: drop-shadow(0 0 2em #fb6161aa);
-}
-
-.user:focus,
-.user:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .username {
@@ -74,7 +75,7 @@
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid black;
   padding: 0.6em 1.2em;
   margin: 2px 0;
   font-size: 1em;
@@ -86,8 +87,4 @@ button {
 }
 button:hover {
   border-color: #eb1c24;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
