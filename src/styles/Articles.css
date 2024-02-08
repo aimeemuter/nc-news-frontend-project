@@ -22,11 +22,6 @@
   filter: drop-shadow(0 0 2em #fb6161aa);
 }
 
-.article-card:focus,
-.article-card:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 .article-card-text {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

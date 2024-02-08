@@ -1,9 +1,8 @@
 import "../styles/FullArticle.css";
 import { dateFormatter } from "../utils/formatters";
 
-const FullArticle = ({ article }) => {
-  // use isLoading state instead later?
-  if (article.created_at) {
+const FullArticle = ({ article, isLoading }) => {
+  if (!isLoading) {
     const { date, time } = dateFormatter(article.created_at);
     return (
       <main className="full-article">

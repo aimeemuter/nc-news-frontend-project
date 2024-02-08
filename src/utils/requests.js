@@ -1,50 +1,42 @@
 import axios from "axios";
 
-export const fetchUsers = async () => {
-  const response = await axios.get(
-    "https://nc-news-application.onrender.com/api/users"
-  );
-  const {
-    data: { users },
-  } = response;
-  return users;
+export const getUsers = () => {
+  return axios
+    .get("https://nc-news-application.onrender.com/api/users")
+    .then(({ data: { users } }) => {
+      return users;
+    });
 };
 
-export const fetchUser = async (username) => {
-  const response = await axios.get(
-    `https://nc-news-application.onrender.com/api/users/${username}`
-  );
-  const {
-    data: { user },
-  } = response;
-  return user;
+export const getUser = (username) => {
+  return axios
+    .get(`https://nc-news-application.onrender.com/api/users/${username}`)
+    .then(({ data: { user } }) => {
+      return user;
+    });
 };
 
-export const fetchArticles = async () => {
+export const getArticles = () => {
   let url = `https://nc-news-application.onrender.com/api/articles`;
-  const response = await axios.get(url);
-  const {
-    data: { articles },
-  } = response;
-  return articles;
+  return axios.get(url).then(({ data: { articles } }) => {
+    return articles;
+  });
 };
 
-export const fetchArticle = async (article_id) => {
-  const response = await axios.get(
-    `https://nc-news-application.onrender.com/api/articles/${article_id}`
-  );
-  const {
-    data: { article },
-  } = response;
-  return article;
+export const getArticle = (article_id) => {
+  return axios
+    .get(`https://nc-news-application.onrender.com/api/articles/${article_id}`)
+    .then(({ data: { article } }) => {
+      return article;
+    });
 };
 
-export const fetchComments = async (article_id) => {
-  const response = await axios.get(
-    `https://nc-news-application.onrender.com/api/articles/${article_id}/comments`
-  );
-  const {
-    data: { comments },
-  } = response;
-  return comments;
+export const getComments = (article_id) => {
+  return axios
+    .get(
+      `https://nc-news-application.onrender.com/api/articles/${article_id}/comments`
+    )
+    .then(({ data: { comments } }) => {
+      return comments;
+    });
 };

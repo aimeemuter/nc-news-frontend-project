@@ -7,7 +7,7 @@
 }
 
 .comment-card {
-  max-width: 600px;
+  width: 600px;
   list-style: none;
   border: solid 2px black;
   border-radius: 10px;
@@ -46,9 +46,4 @@
   border-left: solid 1px black;
   align-self: stretch;
   margin: 0;
-  position: relative;
-}
-
-.comment-card .votes-area .votes {
-  position: calc(center);
 }

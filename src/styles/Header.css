@@ -27,7 +27,7 @@
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 120px;
+  width: 110px;
   display: inline-block;
 }
 
@@ -36,14 +36,10 @@
   filter: drop-shadow(0 0 2em #fb6161aa);
 }
 
-.active-user:focus,
-.active-user:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 .username {
   color: #eb1c24;
-  padding: 5px;
+  padding: 0;
+  margin: 0;
 }
 
 .username:hover {
@@ -56,4 +52,9 @@
   border-radius: 10px;
   background-color: white;
   border: solid 2px #eb1c24;
+  margin: 5px;
+}
+
+.change-user {
+  margin: 0;
 }
