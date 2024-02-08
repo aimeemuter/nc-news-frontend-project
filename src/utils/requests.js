@@ -40,3 +40,14 @@ export const getComments = (article_id) => {
       return comments;
     });
 };
+
+export const patchArticleVotes = (article_id, votes) => {
+  return axios
+    .patch(
+      `https://nc-news-application.onrender.com/api/articles/${article_id}`,
+      { inc_votes: votes }
+    )
+    .then(({ data: { article } }) => {
+      return article;
+    });
+};

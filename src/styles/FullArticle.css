@@ -1,7 +1,7 @@
 .full-article {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
 }
 
 .full-article .title {
@@ -50,4 +50,34 @@
 
 .full-article .votes {
   grid-column: 1/-1;
+  margin: 10px 0;
+}
+
+.voting-buttons {
+  grid-column: 1/-1;
+}
+
+.voting-buttons .upvote,
+.downvote {
+  width: 50px;
+  height: 40px;
+  margin: 2px;
+}
+
+.votes .votes-text {
+  margin: 0;
+}
+
+.upvote:hover {
+  border-color: green;
+}
+
+.upvote:active {
+  background-color: green;
+  border-color: black;
+}
+
+.downvote:active {
+  background-color: red;
+  border-color: black;
 }
