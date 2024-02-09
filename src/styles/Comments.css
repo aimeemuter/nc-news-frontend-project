@@ -42,10 +42,21 @@
 
 .comment-card .votes-area {
   grid-column: 2/-1;
-  grid-row: 1/3;
+  grid-row: 1/5;
   align-self: center;
   border-left: solid 1px black;
   align-self: stretch;
   margin: 0;
 }
 
+.delete-button {
+  margin: 0;
+  width: 100px;
+  justify-self: center;
+  margin-bottom: 5px;
+  background-color: #851b1e;
+}
+
+.delete-button:hover {
+  border-color: white;
+}

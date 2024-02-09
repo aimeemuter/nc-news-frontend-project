@@ -14,6 +14,7 @@ const Votes = ({ votes, article_id }) => {
   };
 
   const handleClick = (number) => {
+    setIsError(false);
     if (number === 1) {
       if (isUpvoteClicked) {
         setLocalVotes(0);
