@@ -43,9 +43,8 @@ const Comments = ({ article: { article_id, comment_count } }) => {
           <p>There are no comments yet...</p>
         )}
       </div>
-      {showComments && !activeUser && <p>Sign in to comment!</p>}
+      {showComments && !activeUser && <p>Log in to comment!</p>}
       {showComments && activeUser && <AddComment article_id={article_id} />}
-      {activeUser === null && comment_count === 0 && <p>Log in to comment!</p>}
       {showComments && !isLoading && (
         <section className="comments">
           <ul className="comments-list">
