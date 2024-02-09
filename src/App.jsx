@@ -8,7 +8,9 @@ import { useState } from "react";
 import Article from "./pages/Article";
 
 function App() {
-  const [activeUser, setActiveUser] = useState(null);
+  const [activeUser, setActiveUser] = useState(
+    JSON.parse(localStorage.getItem("user"))
+  );
   return (
     <UserContext.Provider value={{ activeUser, setActiveUser }}>
       <Routes>

@@ -1,8 +1,9 @@
 .comments-list {
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
   gap: 10px;
 }
 
@@ -47,3 +48,4 @@
   align-self: stretch;
   margin: 0;
 }
+

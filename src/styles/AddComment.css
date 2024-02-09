@@ -1,0 +1,18 @@
+.comment-form {
+  display: grid;
+  grid-template-columns: 100%;
+  margin: 10px auto;
+  justify-items: center;
+}
+
+.textbox {
+  max-width: 350px;
+  min-width: 300px;
+  max-height: 200px;
+  min-height: 100px;
+  border-radius: 10px;
+}
+
+.submit-button {
+  margin: 5px;
+}
