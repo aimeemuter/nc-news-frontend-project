@@ -51,3 +51,14 @@ export const patchArticleVotes = (article_id, votes) => {
       return article;
     });
 };
+
+export const postComment = (article_id, username, comment) => {
+  return axios
+    .post(
+      `https://nc-news-application.onrender.com/api/articles/${article_id}/comments`,
+      { username, body: comment }
+    )
+    .then(({ data: { comment } }) => {
+      return comment;
+    });
+};

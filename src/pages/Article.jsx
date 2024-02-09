@@ -26,6 +26,7 @@ const Article = () => {
       <Header />
       <FullArticle article={article} isLoading={isLoading} />
       <Comments article={article} />
+      {isLoading && <p>Loading...</p>}
       {isError && <p>Whoops! Something went wrong!</p>}
     </div>
   );

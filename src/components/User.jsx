@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../contexts/UserContext";
+import { getUser } from "../utils/requests";
 
 const User = ({ user }) => {
   const { setActiveUser } = useContext(UserContext);
@@ -8,7 +9,10 @@ const User = ({ user }) => {
     const innerText = e.target.innerText;
     const username =
       innerText.length > 0 ? innerText : e.target.alt.split(" ")[3];
-    setActiveUser(username);
+    getUser(username).then((user) => {
+      localStorage.setItem("user", JSON.stringify(user));
+      setActiveUser(user);
+    });
   };
 
   return (

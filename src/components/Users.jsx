@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import User from "./User";
 import { getUsers } from "../utils/requests";
 import { Link } from "react-router-dom";
+import UserContext from "../contexts/UserContext";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { setActiveUser } = useContext(UserContext);
 
   useEffect(() => {
     getUsers().then((users) => {
@@ -16,11 +18,12 @@ const Users = () => {
 
   const handleClick = () => {
     localStorage.removeItem("user");
+    setActiveUser(null);
   };
 
   return (
     <>
-      {!isLoading && <p>Select a profile to sign in...</p>}
+      {!isLoading && <p>Select a profile to sign in and view articles...</p>}
       <ul className="users-list">
         {isLoading && <p>Loading...</p>}
 
@@ -28,10 +31,11 @@ const Users = () => {
           <User key={user.username} user={user} />
         ))}
       </ul>
+      {!isLoading && <p>...or continue as a guest</p>}
       {!isLoading && (
         <Link to="/articles">
-          <button className="view-articles" onClick={handleClick}>
-            View Articles
+          <button className="continue-as-guest" onClick={handleClick}>
+            CONTINUE AS GUEST
           </button>
         </Link>
       )}

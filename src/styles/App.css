@@ -88,3 +88,8 @@ button {
 button:hover {
   border-color: #eb1c24;
 }
+
+.continue-as-guest {
+  font-weight: normal;
+  font-size: 15px;
+}

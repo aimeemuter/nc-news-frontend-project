@@ -4,6 +4,7 @@ import UserContext from "../contexts/UserContext";
 import { useContext } from "react";
 import { getComments } from "../utils/requests";
 import "../styles/Comments.css";
+import AddComment from "./AddComment";
 
 const Comments = ({ article: { article_id, comment_count } }) => {
   const [comments, setComments] = useState([]);
@@ -38,11 +39,12 @@ const Comments = ({ article: { article_id, comment_count } }) => {
         {comment_count > 0 && (
           <button onClick={handleClick}>{buttonText}</button>
         )}
-        {comment_count === 0 && <p>There are no comments yet...</p>}
+        {comment_count === 0 && !isLoading && (
+          <p>There are no comments yet...</p>
+        )}
       </div>
-      {activeUser !== null && comment_count === 0 && (
-        <button>Add Comment</button>
-      )}
+      {showComments && !activeUser && <p>Sign in to comment!</p>}
+      {showComments && activeUser && <AddComment article_id={article_id} />}
       {activeUser === null && comment_count === 0 && <p>Log in to comment!</p>}
       {showComments && !isLoading && (
         <section className="comments">
