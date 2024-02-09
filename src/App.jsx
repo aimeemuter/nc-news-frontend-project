@@ -6,6 +6,7 @@ import About from "./pages/About";
 import UserContext from "./contexts/UserContext";
 import { useState } from "react";
 import Article from "./pages/Article";
+import Topic from "./pages/Topic";
 
 function App() {
   const [activeUser, setActiveUser] = useState(
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/articles" element={<Home />}></Route>
         <Route path="/article/:article_id" element={<Article />}></Route>
+        <Route path="/topics/:topic" element={<Topic />}></Route>
       </Routes>
     </UserContext.Provider>
   );
