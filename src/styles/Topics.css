@@ -1,0 +1,10 @@
+.topics-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.topic-button {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 5px;
+}

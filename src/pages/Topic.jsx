@@ -1,15 +1,18 @@
+import { useParams } from "react-router-dom";
 import Articles from "../components/Articles";
 import Header from "../components/Header";
 import Topics from "../components/Topics";
 
-const Home = () => {
+const Topic = () => {
+  const { topic } = useParams();
+
   return (
-    <div>
+    <>
       <Header />
       <Topics />
-      <Articles />
-    </div>
+      <Articles topic={topic} />
+    </>
   );
 };
 
-export default Home;
+export default Topic;

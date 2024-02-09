@@ -33,7 +33,7 @@ const CommentCard = ({
             <p>Votes:</p>
             <p className="votes">{votes}</p>
           </div>
-          {activeUser.username === author && (
+          {activeUser && activeUser.username === author && (
             <button className="delete-button" onClick={handleClick}>
               delete
             </button>
