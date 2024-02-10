@@ -1,10 +1,13 @@
 .topics-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin: 10px 0;
 }
 
 .topic-button {
   text-transform: uppercase;
   font-weight: normal;
+  width: 120px;
   margin: 5px;
 }

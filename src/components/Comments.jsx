@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { getComments } from "../utils/requests";
 import "../styles/Comments.css";
 import AddComment from "./AddComment";
+import Loading from "./Loading";
 
 const Comments = ({ article: { article_id, comment_count } }) => {
   const [comments, setComments] = useState([]);
@@ -51,7 +52,7 @@ const Comments = ({ article: { article_id, comment_count } }) => {
             {comments.map((comment) => (
               <CommentCard key={comment.comment_id} comment={comment} />
             ))}
-            {isLoading && <p>Loading...</p>}
+            <div className="container">{isLoading && <Loading />}</div>
             {isError && <p>Whoops! Something went wrong!</p>}
           </ul>
         </section>

@@ -3,6 +3,7 @@ import User from "./User";
 import { getUsers } from "../utils/requests";
 import { Link } from "react-router-dom";
 import UserContext from "../contexts/UserContext";
+import Loading from "./Loading";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -24,9 +25,8 @@ const Users = () => {
   return (
     <>
       {!isLoading && <p>Select a profile to sign in and view articles...</p>}
+      <div className="container">{isLoading && <Loading />}</div>
       <ul className="users-list">
-        {isLoading && <p>Loading...</p>}
-
         {users.map((user) => (
           <User key={user.username} user={user} />
         ))}
