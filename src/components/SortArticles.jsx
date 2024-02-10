@@ -34,9 +34,7 @@ const SortArticles = ({ setSearchParams }) => {
           <button
             className="dropdown-button"
             onClick={() => handleClick({ sort_by: "created_at" })}
-            style={{
-              color: `${controlColour({ sortByValue: "created_at" })}`,
-            }}
+            style={{ color: `${controlColour({ sortByValue: "created_at" })}` }}
           >
             date
           </button>

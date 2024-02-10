@@ -8,5 +8,6 @@
 .topic-button {
   text-transform: uppercase;
   font-weight: normal;
+  width: 120px;
   margin: 5px;
 }
