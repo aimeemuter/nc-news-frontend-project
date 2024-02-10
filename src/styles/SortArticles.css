@@ -30,12 +30,18 @@
   background-color: black;
 }
 
-.sort-by-dropdown:hover,
+.sort-by-dropdown:hover .dropdown-options {
+  display: block;
+}
+
 .sort-by-dropdown:active .dropdown-options {
   display: block;
 }
 
-.order-dropdown:hover,
+.order-dropdown:hover .dropdown-options {
+  display: block;
+}
+
 .order-dropdown:active .dropdown-options {
   display: block;
 }
