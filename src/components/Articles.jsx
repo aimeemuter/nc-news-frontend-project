@@ -2,14 +2,16 @@ import { useEffect, useState } from "react";
 import { getArticles } from "../utils/requests";
 import ArticleCard from "./ArticleCard";
 import "../styles/Articles.css";
+import Loading from "./Loading";
 
-const Articles = ({ topic }) => {
+const Articles = ({ topic, searchParams }) => {
   const [articles, setArticles] = useState([]);
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     setIsLoading(true);
-    getArticles(topic)
+    getArticles(topic, searchParams)
       .then((articles) => {
         setArticles(articles);
         setIsLoading(false);
@@ -18,13 +20,13 @@ const Articles = ({ topic }) => {
         setIsError(true);
         setIsLoading(false);
       });
-  }, [topic]);
+  }, [topic, searchParams]);
 
   return (
     <>
+      <div className="container">{isLoading && <Loading />}</div>
       <section className="articles">
         <ul className="articles-list">
-          {isLoading && <span className="articles-loading">Loading...</span>}
           {articles.map((article) => (
             <ArticleCard key={article.article_id} article={article} />
           ))}

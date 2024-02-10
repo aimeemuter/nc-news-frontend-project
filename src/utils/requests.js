@@ -12,9 +12,14 @@ export const getUser = (username) => {
   return instance.get(`/users/${username}`).then(({ data: { user } }) => user);
 };
 
-export const getArticles = (topic) => {
+export const getArticles = (topic, searchParams) => {
   let url = `/articles`;
-  if (topic) url += `?topic=${topic}`;
+  const sort_by = searchParams.get("sort_by");
+  const order = searchParams.get("order");
+  if (topic && !sort_by) url += `?topic=${topic}`;
+  else if (!topic && sort_by) url += `?sort_by=${sort_by}&order=${order}`;
+  else if (topic && sort_by)
+    url += `?topic=${topic}&sort_by=${sort_by}&order=${order}`;
   return instance.get(url).then(({ data: { articles } }) => articles);
 };
 

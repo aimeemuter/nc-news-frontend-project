@@ -1,0 +1,39 @@
+.sort-by-dropdown,
+.order-dropdown {
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  overflow: auto;
+}
+
+.sort-by-button,
+.order-button {
+  background-color: #9e1a1e;
+  border-color: #e8e8e8;
+  width: 100px;
+}
+
+.dropdown-button {
+  padding: 5px;
+  margin: 0;
+  border-color: #e8e8e8;
+  width: 100px;
+}
+
+.dropdown-button:hover {
+  border-color: #e8e8e8;
+  background-color: black;
+}
+
+.sort-by-dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.order-dropdown:hover .dropdown-options {
+  display: block;
+}

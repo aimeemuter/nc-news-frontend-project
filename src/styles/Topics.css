@@ -1,6 +1,8 @@
 .topics-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin: 10px 0;
 }
 
 .topic-button {
