@@ -30,7 +30,9 @@ const AddComment = ({ article_id }) => {
   return (
     <>
       {!isCommenting && !postedComment && (
-        <button onClick={handleAddComment}>Add Comment</button>
+        <button className="add-comment-button" onClick={handleAddComment}>
+          Add Comment
+        </button>
       )}
       {isCommenting && !postedComment && (
         <form onSubmit={handleSubmit} className="comment-form">

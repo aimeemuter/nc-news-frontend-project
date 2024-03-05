@@ -11,8 +11,16 @@
   max-height: 200px;
   min-height: 100px;
   border-radius: 10px;
+  background-color: #2b2a33;
+  border-color: #75747a;
+  color: #8d8d93;
 }
 
 .submit-button {
   margin: 5px;
+  color: white;
+}
+
+.add-comment-button {
+  color: white;
 }
