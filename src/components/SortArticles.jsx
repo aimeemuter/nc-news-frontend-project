@@ -28,9 +28,9 @@ const SortArticles = ({ setSearchParams }) => {
 
   return (
     <>
-      <span class="sort-by-dropdown">
+      <span className="sort-by-dropdown">
         <button className="sort-by-button">Sort By</button>
-        <div class="dropdown-options">
+        <div className="dropdown-options">
           <button
             className="dropdown-button"
             onClick={() => handleClick({ sort_by: "created_at" })}
@@ -56,9 +56,9 @@ const SortArticles = ({ setSearchParams }) => {
           </button>
         </div>
       </span>
-      <span class="order-dropdown">
+      <span className="order-dropdown">
         <button className="order-button">Order</button>
-        <div class="dropdown-options">
+        <div className="dropdown-options">
           <button
             className="dropdown-button"
             onClick={() => handleClick({ order: "asc" })}

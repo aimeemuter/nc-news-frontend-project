@@ -55,8 +55,13 @@
   justify-self: center;
   margin-bottom: 5px;
   background-color: #851b1e;
+  color: white;
 }
 
 .delete-button:hover {
   border-color: white;
+}
+
+.comment-toggle-button {
+  color: white;
 }

@@ -25,6 +25,8 @@ const Comments = ({ article: { article_id, comment_count } }) => {
         .catch((e) => {
           setIsError(true);
         });
+    } else {
+      setIsLoading(false);
     }
   }, [showComments]);
 
@@ -38,14 +40,16 @@ const Comments = ({ article: { article_id, comment_count } }) => {
     <div>
       <div className="comment-toggle">
         {comment_count > 0 && (
-          <button onClick={handleClick}>{buttonText}</button>
+          <button className="comment-toggle-button" onClick={handleClick}>
+            {buttonText}
+          </button>
         )}
         {comment_count === 0 && !isLoading && (
           <p>There are no comments yet...</p>
         )}
       </div>
-      {showComments && !activeUser && <p>Log in to comment!</p>}
-      {showComments && activeUser && <AddComment article_id={article_id} />}
+      {!activeUser && <p>Log in to comment!</p>}
+      {activeUser && <AddComment article_id={article_id} />}
       {showComments && !isLoading && (
         <section className="comments">
           <ul className="comments-list">
